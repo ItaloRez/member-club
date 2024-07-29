@@ -33,7 +33,7 @@ function loadUserInfos(client) {
 
 function loadHistory(history) {
   historyCardList.innerHTML = "";
-  historyQuantity.textContent = `${history.length} consultas`;
+  historyQuantity.textContent = `${history.length} cortes`;
 
   history.forEach((card) => {
     const historyCard = document.createElement("div");
@@ -64,6 +64,10 @@ function loadHistory(history) {
 function loadCard(card) {
   const cutsNeeded = card.cutsNeeded;
   const totalCuts = card.totalCuts;
+
+  if (totalCuts === cutsNeeded) {
+    alert("Parabéns! Seu próximo corte é gratuito!");
+  }
 
   cardList.innerHTML = "";
 
