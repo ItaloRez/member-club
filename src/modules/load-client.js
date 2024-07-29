@@ -103,10 +103,12 @@ function loadProgress(progress) {
   const totalCuts = progress.totalCuts;
   const percentage = (totalCuts / cutsNeeded) * 100;
 
-  console.log(percentage);
-
   progressCutsRemaining.textContent = `${cutsRemaining}`;
   progressCutsRemainingNumber.textContent = `${totalCuts} de ${cutsNeeded}`;
 
-  progressBarFill.style.width = `${percentage}%`;
+  if (percentage <= 100) {
+    progressBarFill.style.width = `${percentage}%`;
+  } else {
+    progressBarFill.style.width = "100%";
+  }
 }
