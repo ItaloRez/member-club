@@ -6,12 +6,20 @@ const button = document.getElementsByTagName("button")[0];
 
 button.addEventListener("click", async () => {
   try {
-    const value = input.value;
+    const clientId = input.value.trim();
 
-    await searchClient(value);
+    await searchClient(clientId);
   } catch (error) {
     console.error(error);
     alert("Erro ao buscar cliente");
+  }
+});
+
+input.addEventListener("keypress", async function (event) {
+  if (event.key === "Enter") {
+    const clientId = input.value.trim();
+
+    await searchClient(clientId);
   }
 });
 
