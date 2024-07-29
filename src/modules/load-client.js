@@ -65,7 +65,7 @@ function loadCard(card) {
   const cutsNeeded = card.cutsNeeded;
   const totalCuts = card.totalCuts;
 
-  if (totalCuts === cutsNeeded) {
+  if (totalCuts >= cutsNeeded) {
     alert("Parabéns! Seu próximo corte é gratuito!");
   }
 
