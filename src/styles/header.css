@@ -1,0 +1,58 @@
+
+header {
+  & .logo{
+    display: block;
+    width: 99.43px;
+    height: 48px;
+    margin-inline: auto;
+  }
+
+  & .input {
+    background-color: var(--base-gray-300);
+    border: none;
+    max-width: 400px;
+    height: 56px;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--base-gray-400);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+
+    input {
+      background: transparent;
+      border: none;
+      flex: 1;
+    }
+
+    button {
+      border: none;
+      background: var(--base-gray-700);
+      border-radius: 0.5rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background: var(--base-gray-600);
+      }
+    }
+  }
+
+  
+}
+
+@media (width >= 80em) {
+  header {
+    & .logo{
+      width: 116px;
+      height: 56px;
+    }
+  }
+}

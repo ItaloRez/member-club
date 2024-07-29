@@ -1,0 +1,32 @@
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), (100% - (var(--px-lg) * 2)));
+  margin-inline: auto;
+}
+
+.py-lg {
+  padding-block: var(--py-lg);
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.divider {
+  border-top: 1px solid var(--base-gray-200);
+  height: 1px;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
+}
